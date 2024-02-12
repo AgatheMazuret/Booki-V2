@@ -21,7 +21,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 40px;
     box-sizing: border-box;
 }
 
@@ -62,12 +62,14 @@ a {
 .logo {
     display: flex;
     width: 100%;
-    gap: 80%;
+    gap: 75%;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    width: 40%;
+    text-align: end;
 }
 
 nav .hebAct:hover {
@@ -77,11 +79,6 @@ nav .hebAct:hover {
 
 .logoBooki img {
     height: 19px;
-}
-
-nav {
-    width: 40%;
-    text-align: end;
 }
 
 /****** Form ***********/
@@ -269,14 +266,15 @@ button {
 .activites-title {
     display: flex;
     margin-bottom: 35px;
-    
-    
+    margin-left: 30px;
+
+
 }
 
 .activites-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 2%;
+    gap: 3%;
 
 }
 
@@ -295,7 +293,27 @@ button {
 }
 
 .activites-cards .card-txt {
-padding-left: 15px;
+    padding-left: 15px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 225px;
+    background-color: #d9d9d9;
+    margin-top: 61px;
+    gap: 10%;
+}
+
+.colonneFooter {
+    margin: 10px 0 20px 55px;
+}
+
+.titreFooter {
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
 
@@ -304,6 +322,17 @@ padding-left: 15px;
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .hebAct {
+        margin-right: 10px;
+    }
+
+    /* ..Filtres tablette.. */
+
+    .lesFiltres h2 {
+        width: 100%;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -334,16 +363,29 @@ padding-left: 15px;
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    /* ..Activités tablette.. */
+
+    .activites-cards .card {
+        width: 193px;
+        height: 270px;
+    }
+
+    .activites-cards img {
+        height: 200px;
+    }
+
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    
+
     .main-container {
         padding: 0;
     }
 
-    /* ..Header.. */
+    /* ..Header smartphone.. */
     .logo {
         flex-direction: column;
     }
@@ -372,7 +414,7 @@ padding-left: 15px;
         border-bottom: 2px solid #0065fc;
     }
 
-    /* ..Form.. */
+    /* ..Form smartphone.. */
 
     .form {
         display: flex;
@@ -401,27 +443,28 @@ padding-left: 15px;
         border-radius: 15px;
         padding: 15px;
     }
-    /* ..Les filtres.. */
+
+    /* ..Les filtres smartphone.. */
 
     .lesFiltres h2 {
         width: 100%;
-      }
+    }
 
-      .item {
+    .item {
         width: 130px;
         height: 25px;
         text-align: center;
         margin-bottom: 5px;
-      }
-
-      /* ..Hébergements and Populaires.. */
-
-      .hebergements-and-populaires section {
-        border-radius: 0;
-        
     }
 
-    /* ..Populaires.. */
+    /* ..Hébergements and Populaires smartphone.. */
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+
+    }
+
+    /* ..Populaires smartphone.. */
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
@@ -430,33 +473,49 @@ padding-left: 15px;
     .populaires-cards {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         width: 100%;
     }
 
     .populaires-cards .card {
         width: 335px;
-            
+
     }
 
-    /* ..Hébergements.. */
- 
+    /* ..Hébergements smartphone.. */
+
+    .hebergements-cards {
+        justify-content: center;
+    }
+
     .hebergements-cards .card {
-     width: 335px;
+        width: 335px;
 
     }
 
-    /* ..Activités.. */
+    /* ..Activités smartphone.. */
 
     .activites-cards {
         justify-content: center;
     }
 
     .activites-cards .card {
+        width: 315px;
         height: 200px;
     }
 
     .activites-cards img {
         height: 141px;
     }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 500px;
+        gap: 0;
+    }
+
+
 
 }
