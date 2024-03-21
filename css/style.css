@@ -214,7 +214,6 @@ button {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -223,6 +222,7 @@ button {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    background-color: var(--main-bg-color);
 }
 
 .hebergements-cards {
@@ -277,6 +277,7 @@ button {
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    background-color: var(--main-bg-color);
 }
 
 .populaires-title {
@@ -558,7 +559,7 @@ footer {
     flex-direction: row;
     width: 36%;
     margin-bottom: 16px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .item i {
@@ -568,19 +569,42 @@ footer {
     /********* Hébergements et populaires téléphone *******/
     .hebergements-and-populaires{
         flex-direction: column-reverse;
-        border-radius: 0;
         
     }
 
+    .hebergements-and-populaires section {
+        border-radius: 0;
+    }
+
     /********* populaires téléphone *******/
+    .populaires {
+        background-color: var(--main-bg-color);
+    }
+    
     .populaires-cards{
         display: block;
     }
 
     /********* Hébergements téléphone *******/
     
+    .hebergements {
+        background-color: var(--white-color);
+    }
+ 
     .hebergements-cards {
+        align-items: center;
         justify-content: center;
+    }
+
+    .hebergements-cards .card {
+        justify-content: center;
+        width: 335px;
+        height: 207px;
+    }
+
+    .hebergements-cards .card img {
+        width: 335px;
+        height: 124px;
     }
 
     /********* Activités téléphone *******/
@@ -588,6 +612,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .activites .card {
