@@ -1,7 +1,6 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    margin: 0 auto;
 }
 
 :root {
@@ -98,10 +97,6 @@ section h1 {
     margin-bottom: 10px;
 }
 
-section p {
-    font-weight: 400;
-}
-
 /************ Formulaire de recherche ***********/
 
 form {
@@ -110,7 +105,7 @@ form {
 
 label {
     border: var(--main-bg-color) 1px solid;
-    padding: 10px 15px 10px 15px;
+    padding: 8px 15px 10px 15px;
     background-color: var(--main-bg-color);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -126,7 +121,7 @@ input {
 button {
     border: var(--main-color) 1px solid;
     background-color: var(--main-color);
-    padding: 10px;
+    padding: 11px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     color: var(--white-color);
@@ -188,7 +183,8 @@ p i {
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    align-items: center;
+    line-height: 50px; /* Centrer verticalement */
+    text-align: center; /* Centrer horizontalement */
 }
 
 /****** Hebergements And Populaires ***********/
@@ -223,6 +219,7 @@ p i {
     width: 250px;
     height: 207px;
     flex-direction: column;
+    margin-bottom: 20px;
     box-shadow: 5px 6px 20px -5px rgba(97, 96, 96, 0.71);
     -webkit-box-shadow: 5px 6px 20px -5px rgba(97, 96, 96, 0.71);
     -moz-box-shadow: 5px 6px 20px -5px rgba(97, 96, 96, 0.71);
@@ -244,9 +241,18 @@ p i {
 .hebergements-cards .card-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    margin-left: 10px;
 }
+
+.hebergements-cards .card-content h3 {
+    margin: 10px 0 8px 0;
+}
+
+.hebergements-cards .card-content p {
+    margin: 0 0 4px 0;
+}
+
+
 
 /****** Populaires ***********/
 .populaires {
