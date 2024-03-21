@@ -176,15 +176,35 @@ button {
 
 /************** Partie Info ***************/
 
-p i {
+.item {
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    display: flex;
+    padding: 10px 15px 10px 20px;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.item i {
+    color: #0065fc;
+    padding-right: 10px;
+}
+
+.loc {
+    display: flex;
+    align-items: baseline;
+}
+
+.info {
     margin: 35px 10px 35px 0;
-    color: var(--main-color);
-    border: 2px solid var(--main-bg-color);
+    color: #0065fc;
+    border: 2px solid #f2f2f2;
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    line-height: 50px; /* Centrer verticalement */
-    text-align: center; /* Centrer horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -394,14 +414,27 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .main-container {
+        padding: 0 15px;
+    }
+
+    /****** Filtres tablette ***********/
+    .filters {
+        gap: 1%;
+    }
+
+    /****** Hébergements et populaires tablette ***********/
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
+    /****** Hébergements tablette ***********/
     .hebergements {
         width: 100%;
     }
 
+    /****** populaires tablette ***********/
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -425,29 +458,145 @@ footer {
         font-size: 13px;
     }
 
+    /****** Activités à Marseille Tablette ******/
+    .activites h2 {
+        margin-left: 15px;
+    }
 
+    .activites .card {
+        height: 267px;
+    }
+
+    .activites .card img {
+        height: 211px;
+    }
+
+    .card-header-activites {
+        font-size: 15px;
+        margin: 16px 0 0 20px;
+    }
+
+    /****** Footer tablette ***********/
     footer {
         gap: 0;
+    }
+
+    .colonneFooter {
+        margin: 25px 0 30px 40px;
     }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
-    .rechercher {
+/****** Main smartphone ***********/
+
+    .main-container {
+        padding: 0;
+    }
+
+    /****** Nav smartphone ***********/
+    .headerLogo {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 35px 0 20px 0;
+    }
+
+    .logoBooki {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav a {
+        display: flex;
+        justify-content: center;
+        padding: 0 35px 20px 20px;
+        width: 50%;
+    }
+
+    nav a:hover {
+        color: var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        border-top: none;
+    }
+/****** form smartphone *****/
+    .form {
+        display: flex;
+        justify-content: center;
+      }
+      .rechercher {
         display: none;
     }
-    
+
     .loupe {
         display: block;
     }
 
-    .populaires .populaires-cards {
-        flex-direction: column;
+    /****** Les filtres smartphone *****/
+
+  .filters {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .filters h2 {
+    width: 100%;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    width: 36%;
+    margin-bottom: 16px;
+    font-size: 11px;
+  }
+
+  .item i {
+    padding-right: 8px;
+  }
+
+    /********* Hébergements et populaires téléphone *******/
+    .hebergements-and-populaires{
+        flex-direction: column-reverse;
+        border-radius: 0;
+        
     }
 
+    /********* populaires téléphone *******/
+    .populaires-cards{
+        display: block;
+    }
+
+    /********* Hébergements téléphone *******/
+    
+    .hebergements-cards {
+        justify-content: center;
+    }
+
+    /********* Activités téléphone *******/
     .activites {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .activites .card {
+        width: 315px;
+        height: 200px;
+    }
+
+    .activites .card img {
+        height: 141px;
     }
 
     /********* Footer téléphone *******/
