@@ -2,7 +2,7 @@
 * {
     font-family: 'Raleway', sans-serif;
 }
-
+/************Variables***********/
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
@@ -66,11 +66,15 @@ a {
 /**************** Logo et nav *************/
 .headerLogo {
     display: flex;
-    margin: 35px 0 70px 0;
+    margin: 0 0 70px 20px;
+    align-items: center;
+    
 }
 
 .logoBooki {
-    width: 60%;
+    width: 100%;
+    margin-top: 30px;
+
 }
 
 #logoBooki {
@@ -79,8 +83,10 @@ a {
 }
 
 nav {
-    width: 40%;
+    display: flex;
+    width: 20%;
     text-align: end;
+    flex-wrap: nowrap;
 }
 
 nav a {
@@ -93,9 +99,10 @@ nav a {
 nav a:hover {
     color: var(--main-color);
     border-top: 2px solid var(--main-color);
+    transition: 100ms;
 }
 
-section h1 {
+section h2 {
     font-size: 22px;
     margin-bottom: 10px;
 }
@@ -130,6 +137,7 @@ button {
     color: var(--white-color);
     font-weight: 700;
     margin-left: -4px;
+    cursor: pointer;
 }
 
 .location {
@@ -146,11 +154,12 @@ button {
 
 .filters {
     width: 100%;
+    display: flex;
     justify-content: flex-start;
     gap: 4%;
     flex-wrap: wrap;
     align-items: baseline;
-    display: flex;
+    
 }
 
 .filters h2 {
@@ -164,6 +173,7 @@ button {
     padding: 10px 15px 10px 20px;
     white-space: nowrap;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .item i {
@@ -173,29 +183,10 @@ button {
 
 .item:hover {
     background: var(--filter-bg-color);
+    transition: 500ms;
 }
-
-.loc {
-    display: flex;
-    align-items: baseline;
-}
-
 
 /************** Partie Info ***************/
-
-.item {
-    border: 1px solid #d9d9d9;
-    border-radius: 25px;
-    display: flex;
-    padding: 10px 15px 10px 20px;
-    white-space: nowrap;
-    font-weight: 700;
-}
-
-.item i {
-    color: #0065fc;
-    padding-right: 10px;
-}
 
 .loc {
     display: flex;
@@ -248,12 +239,14 @@ button {
     height: 207px;
     flex-direction: column;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .hebergements .card:hover {
     -ms-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
+    transition: 300ms;
 }
 
 .hebergements-cards img {
@@ -293,6 +286,8 @@ button {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+    width: 335px;
+    height: 146px;
 }
 
 .populaires .card:hover {
@@ -302,8 +297,8 @@ button {
 }
 
 .populaires-cards img {
-    width: 33%;
-    height: 136px;
+    width: 112px;
+    height: 146px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -348,7 +343,7 @@ button {
     font-weight: 700;
     width: 100%;
     font-size: 22px;
-    margin: 0 0 15px 0;
+    margin-left: 10px;
 }
 
 .activites .card {
@@ -365,6 +360,7 @@ button {
     -ms-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
+    transition: 300ms;
 }
 
 .activites img {
@@ -406,6 +402,7 @@ footer {
 .colonneFooter p {
     font-size: 16px;
     font-weight: 400;
+    cursor: pointer;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -494,12 +491,16 @@ footer {
         padding: 0;
     }
 
+    .body {
+        margin: 0;
+    }
+
     /****** Nav smartphone ***********/
     .headerLogo {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        margin: 35px 0 20px 0;
+        margin-bottom: 20px;
     }
 
     .logoBooki {
@@ -591,7 +592,10 @@ footer {
     }
     
     .populaires-cards{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
 
     /********* Hébergements téléphone *******/
