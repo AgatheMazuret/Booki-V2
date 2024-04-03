@@ -2,12 +2,12 @@
 * {
     font-family: 'Raleway', sans-serif;
 }
-/************Variables***********/
+
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
-    --white-color: #ffffff;
+    --white-color: white;
 }
 
 .fa-solid {
@@ -17,12 +17,13 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 ;
+    padding: 0 50px;
     box-sizing: border-box;
 }
 
@@ -37,10 +38,10 @@ a {
 }
 
 .card {
-    background-color: var(--white-color);
+    background-color: white;
     border-radius: 20px;
     padding: 5px;
-    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 .card img {
@@ -56,44 +57,31 @@ a {
 }
 
 .neutral-star {
-    color: var(--main-bg-color);
+    color: var(--main-bg-color)
 }
 
-.top-page {
-    margin: 20px;
+/************* Header ***********/
+.logoBooki img {
+    width: 62px;
+    padding-top: 30px;
 }
 
-/**************** Logo et nav *************/
+/************* Nav ***********/
 .headerLogo {
     display: flex;
-    margin: 0 0 70px 20px;
-    align-items: center;
-    
-}
-
-.logoBooki {
-    width: 100%;
-    margin-top: 30px;
-
-}
-
-#logoBooki {
-    width: 61px;
-    height: 19px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 60px;
 }
 
 nav {
     display: flex;
-    width: 20%;
-    text-align: end;
-    flex-wrap: nowrap;
+    gap: 68px;
+    align-items: flex-start;
 }
 
 nav a {
-    padding: 30px 35px 0 20px;
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
+    padding-top: 14px;
 }
 
 nav a:hover {
@@ -103,19 +91,26 @@ nav a:hover {
 }
 
 section h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
-/************ Formulaire de recherche ***********/
+br {
+    display: none;
+}
+
+section p {
+    margin: 8px 0 35px 0;
+}
+
+/****** form ***********/
 
 form {
-    margin: 20px 0 45px 0;
+    margin: 20px 0 35px 0;
 }
 
 label {
-    border: var(--main-bg-color) 1px solid;
-    padding: 8px 15px 10px 15px;
+    border: var(--main-bg-color) 0 solid;
+    padding: 12px 15px 15px 15px;
     background-color: var(--main-bg-color);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -124,14 +119,14 @@ label {
 
 input {
     border: 1px solid var(--main-bg-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 
 button {
     border: var(--main-color) 1px solid;
     background-color: var(--main-color);
-    padding: 11px;
+    padding: 14px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     color: var(--white-color);
@@ -149,17 +144,16 @@ button {
     color: var(--white-color);
 }
 
-
-/********** Zone de filtres ***********/
+/*********** Filtres ***********/
 
 .filters {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    gap: 4%;
+    gap: 15px;
     flex-wrap: wrap;
     align-items: baseline;
-    
+
 }
 
 .filters h2 {
@@ -167,7 +161,7 @@ button {
 }
 
 .item {
-    border: 1px solid #d9d9d9;
+    border: 2px solid #d9d9d9;
     border-radius: 25px;
     display: flex;
     padding: 10px 15px 10px 20px;
@@ -185,8 +179,6 @@ button {
     background: var(--filter-bg-color);
     transition: 500ms;
 }
-
-/************** Partie Info ***************/
 
 .loc {
     display: flex;
@@ -213,32 +205,32 @@ button {
 }
 
 .hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+    margin-bottom: 30px;
 }
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
-    background-color: var(--main-bg-color);
 }
 
 .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 35px;
-    margin-bottom: 45px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 20px;
 }
 
 .hebergements-cards .card {
     display: flex;
-    width: 250px;
-    height: 207px;
     flex-direction: column;
-    margin-bottom: 20px;
+    width: 240px;
+    height: 198px;
     cursor: pointer;
 }
 
@@ -249,32 +241,29 @@ button {
     transition: 300ms;
 }
 
-.hebergements-cards img {
-    width: 250px;
-    height: 124px;
+.hebergements-cards .card img {
+    width: 240px;
+    height: 118px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.hebergements-cards .card-content {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
+.hebergements-cards .card-txt {
+    margin-left: 15px;
 }
 
-.hebergements-cards .card-content h3 {
-    margin: 10px 0 8px 0;
+.hebergements-cards .card-txt h3 {
+    margin: 6px 0 8px 0;
 }
 
-.hebergements-cards .card-content p {
-    margin: 0 0 4px 0;
+.card-txt p {
+    font-size: 14px;
+    margin-bottom: 8px;
 }
-
 
 /****** Populaires ***********/
 .populaires {
     width: 32%;
-    background-color: var(--main-bg-color);
 }
 
 .populaires-title {
@@ -286,19 +275,19 @@ button {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
-    width: 335px;
-    height: 146px;
+    cursor: pointer;
 }
 
 .populaires .card:hover {
     -ms-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
+    transition: 300ms;
 }
 
 .populaires-cards img {
-    width: 112px;
-    height: 146px;
+    width: 33%;
+    height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -325,35 +314,32 @@ button {
     margin-bottom: 5px;
 }
 
-
-/****************** Activités à Marseille ************/
+/*************** Activités à Marseille ***********/
 
 .activites {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
     width: 100%;
-    margin-top: 50px;
 }
 
-.titleActivites {
-    flex-wrap: wrap;
-    display: flex;
-    font-weight: 700;
+.activites h2 {
     width: 100%;
-    font-size: 22px;
-    margin-left: 10px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.activites .card {
+.activites-cards {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    width: 22%;
-    height: 445px;
-    margin-top: 15px;
-    background-color: var(--white-color);
-    border-radius: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.activites-cards .card {
+    width: 297px;
+    height: 439px;
+    cursor: pointer;
 }
 
 .activites .card:hover {
@@ -363,18 +349,17 @@ button {
     transition: 300ms;
 }
 
-.activites img {
-    width: 100%;
-    height: 390px;
-    border-radius: 20px 20px 0 0;
-    object-fit: cover;
+.activites-cards .card img {
+    width: 297px;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .card-header-activites {
+    padding: 20px;
     font-weight: 700;
-    margin: 18px 0 10px 20px;
 }
-
 
 /*************** Footer **************/
 
@@ -412,25 +397,45 @@ footer {
 @media (max-width: 1024px) {
 
     .main-container {
-        padding: 0 15px;
+        box-sizing: unset;
+        padding: 0;
     }
 
-    /****** Filtres tablette ***********/
+    header {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
     .filters {
-        gap: 1%;
+        gap: 5px;
     }
 
-    /****** Hébergements et populaires tablette ***********/
     .hebergements-and-populaires {
         flex-direction: column;
+        padding-left: 45px;
+        padding-right: 45px;
     }
 
-    /****** Hébergements tablette ***********/
+    /************* Hébergements tablette ***********/
+
     .hebergements {
         width: 100%;
     }
 
-    /****** populaires tablette ***********/
+    .hebergements-cards .card {
+        width: 180px;
+    }
+
+    .hebergements-cards .card img {
+        width: 180px;
+    }
+
+    .hebergements-cards .card .card-txt {
+        margin-left: 5px;
+    }
+
+    /************ Populaire tablette ***********/
+
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -440,10 +445,15 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
     }
 
-    .populaires-cards a {
-        width: 30%;
+    .populaires-cards .card {
+        width: 276px;
+    }
+
+    .populaires-cards .card .card-content {
+        padding-left: 8px;
     }
 
     .populaires-cards .card-title {
@@ -454,22 +464,33 @@ footer {
         font-size: 13px;
     }
 
-    /****** Activités à Marseille Tablette ******/
+
+    /************ Activités tablette***********/
+
     .activites h2 {
-        margin-left: 15px;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .activites .card {
-        height: 267px;
+    .activites-cards {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .activites .card img {
-        height: 211px;
+    .activites-cards .card {
+        width: 163px;
+        height: 270px;
     }
 
-    .card-header-activites {
-        font-size: 15px;
-        margin: 16px 0 0 20px;
+    .activites-cards .card-header-activites {
+        padding: 15px;
+    }
+
+    .activites-cards .card img {
+        width: 163px;
+        height: 200px;
     }
 
     /****** Footer tablette ***********/
@@ -484,15 +505,21 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-
-/****** Main smartphone ***********/
-
     .main-container {
         padding: 0;
     }
 
-    .body {
-        margin: 0;
+    /****** Les titres smartphone ***********/
+    .hebergements h2,
+    .activites h2 {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /****** Header smartphone ***********/
+    header {
+        padding: 20px;
     }
 
     /****** Nav smartphone ***********/
@@ -500,7 +527,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-bottom: 20px;
+        padding-bottom: 20px;
     }
 
     .logoBooki {
@@ -514,6 +541,7 @@ footer {
         width: 100%;
         display: flex;
         justify-content: center;
+        gap: 0;
     }
 
     nav a {
@@ -528,25 +556,32 @@ footer {
         border-bottom: 2px solid var(--main-color);
         border-top: none;
     }
-/****** form smartphone *****/
+
+    br {
+        display: block;
+    }
+
+    /****** Form *****/
+
     .form {
         display: flex;
         justify-content: center;
-      }
-
-    input {
-        width: 60%;
     }
 
-      .rechercher {
+    input {
+        width: 236px;
+    }
+
+    .rechercher {
         display: none;
     }
 
-     button {
+    button {
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
-        padding:15px;
-     }
+        padding: 15px;
+        margin-left: -12px;
+    }
 
     .loupe {
         display: block;
@@ -554,79 +589,78 @@ footer {
 
     /****** Les filtres smartphone *****/
 
-  .filters {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
+    .filters {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .filters h2 {
-    width: 100%;
-  }
+    .filters h2 {
+        width: 100%;
+    }
 
-  .item {
-    display: flex;
-    flex-direction: row;
-    width: 36%;
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
+    .item {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        font-size: 13px;
+    }
 
-  .item i {
-    padding-right: 8px;
-  }
+    .item i {
+        padding-right: 8px;
+    }
 
-    /********* Hébergements et populaires téléphone *******/
-    .hebergements-and-populaires{
+
+    /*********Hébergements populaires téléphone *******/
+
+    .hebergements-and-populaires {
         flex-direction: column-reverse;
-        
+        padding: 0;
     }
 
     .hebergements-and-populaires section {
         border-radius: 0;
     }
 
-    /********* populaires téléphone *******/
-    .populaires {
-        background-color: var(--main-bg-color);
-    }
-    
-    .populaires-cards{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-
-    /********* Hébergements téléphone *******/
-    
-    .hebergements {
+    .hebergements-and-populaires .hebergements {
         background-color: var(--white-color);
     }
- 
-    .hebergements-cards {
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 0;
+
+    /*********Les plus populaires téléphone *******/
+
+    .populaires {
+        margin-top: 0;
     }
 
-    .hebergements-cards .card {
-        justify-content: center;
+    .populaires-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .populaires-cards .card {
         width: 335px;
-        height: 207px;
+    }
+
+    /*********Hébergements téléphone *******/
+
+    .hebergements-cards .card {
+        width: 335px;
     }
 
     .hebergements-cards .card img {
         width: 335px;
-        height: 124px;
     }
 
-    /********* Activités téléphone *******/
+    /*********Activités téléphone *******/
+
     .activites {
-        display: flex;
+        width: auto;
+    }
+
+    .activites-cards {
+        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
 
     .activites .card {
@@ -635,6 +669,7 @@ footer {
     }
 
     .activites .card img {
+        width: 315px;
         height: 141px;
     }
 
