@@ -499,7 +499,7 @@ footer {
     }
 
     .colonneFooter {
-        margin: 25px 0 30px 40px;
+        margin: 25px 0 30px 60px;
     }
 }
 
@@ -683,6 +683,6 @@ footer {
     }
 
     .colonneFooter {
-        margin: 25px 0 30px 30px;
+        margin: 25px 0 10px 30px;
     }
 }
