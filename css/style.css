@@ -125,7 +125,9 @@ input {
     font-size: 18px;
 }
 
-
+::placeholder {
+    color: black;
+}
 
 button {
     border: var(--main-color) 1px solid;
@@ -151,6 +153,11 @@ button {
 
 /*********** Filtres ***********/
 
+.title-filters {
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
 .filters {
     width: 100%;
     display: flex;
@@ -175,6 +182,7 @@ button {
     font-weight: 700;
     cursor: pointer;
 }
+
 
 .item i {
     color: var(--main-color);
@@ -258,6 +266,10 @@ button {
     margin-bottom: 8px;
 }
 
+.afficherPlus {
+    margin-top: 30px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -267,11 +279,17 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
+}
+
+.populaires-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
 }
 
 .populaires-cards img {
@@ -307,6 +325,7 @@ button {
 
 .activites-cards {
     padding: 30px;
+    margin-bottom: 60px;
 }
 
 .activites-cards h2 {
@@ -349,7 +368,6 @@ footer {
     width: 100%;
     height: 225px;
     background-color: var(--main-bg-color);
-    margin-top: 61px;
     gap: 10%;
 }
 
@@ -367,6 +385,7 @@ footer {
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
+    padding-bottom: 15px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -429,7 +448,6 @@ footer {
 
     .activites {
         height: 270px;
-        padding-bottom: 105px;
     }
 
     .activites .card img {
@@ -605,7 +623,7 @@ footer {
 
 .activites {
     width: auto;
-    height: 845px;
+    height: auto;
     flex-direction: column;
 }
 
@@ -614,7 +632,7 @@ footer {
 }
 
 .activites .card img {
-    height: 141px;
+    min-height: 141px;
 }
 
 /********* Footer téléphone *******/
