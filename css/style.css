@@ -246,6 +246,12 @@ button {
     height: 207px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.hebergements .card:hover {
+    transform: scale(1.05);
 }
 
 .hebergements .card img {
@@ -290,6 +296,12 @@ button {
 
 .populaires-cards .card {
     display: flex;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.populaires-cards .card:hover {
+transform: scale(1.05);
 }
 
 .populaires-cards img {
@@ -345,6 +357,12 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.activites .card:hover {
+    transform: scale(1.05);
 }
 
 .activites .card img {
@@ -386,6 +404,7 @@ footer {
     font-weight: 400;
     cursor: pointer;
     padding-bottom: 15px;
+    cursor: pointer;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
